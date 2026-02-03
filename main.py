@@ -221,7 +221,7 @@ def monitor_steam_downloads():
         print(f"Директория Steam не найдена: {steam_dir}")
         return
 
-    print(f"📁 Путь к Steam: {steam_dir}")
+    print(f"Путь к Steam: {steam_dir}")
     print("=" * 60)
 
     steam_running = False
@@ -280,7 +280,7 @@ def monitor_steam_downloads():
             print("=" * 60)
 
             if status != "No downloads":
-                status_icon = "Ожидание" if status == "Downloading" else "⏸️" if status == "Paused" else "Готово" if status == "Completed" else "🔧"
+                status_icon = "Ожидание" if status == "Downloading" else "Пауза" if status == "Paused" else "Готово" if status == "Completed" else "🔧"
 
                 print(f"{status_icon} СТАТУС: {status}")
                 print(f"ИГРА: {app_name}")
@@ -305,7 +305,7 @@ def monitor_steam_downloads():
 
 
             print("=" * 60)
-            print("⏸️  Для остановки нажмите Ctrl+C")
+            print("Для остановки нажмите Ctrl+C")
 
             for i in range(update_interval, 0, -1):
                 try:
